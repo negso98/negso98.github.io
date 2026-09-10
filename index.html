@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,331 +17,322 @@
     --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
   }
 
-{ box-sizing: border-box; }
+  * { box-sizing: border-box; }
 
-html, body {
-margin: 0;
-padding: 0;
-background: var(--bg);
-color: var(--text);
-font-family: var(--sans);
-}
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+  }
 
-body {
-background-image:
-linear-gradient(var(--line) 1px, transparent 1px),
-linear-gradient(90deg, var(--line) 1px, transparent 1px);
-background-size: 64px 64px;
-background-position: -1px -1px;
-background-color: var(--bg);
-background-blend-mode: normal;
-opacity: 1;
-}
+  body {
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: -1px -1px;
+    background-color: var(--bg);
+    background-blend-mode: normal;
+    opacity: 1;
+  }
 
-body::before {
-content: "";
-}
+  body::before {
+    content: "";
+  }
 
-.wrap {
-max-width: 980px;
-margin: 0 auto;
-padding: 64px 32px 96px;
-position: relative;
-}
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 64px 32px 96px;
+    position: relative;
+  }
 
-/* subtle vignette so the grid doesn't dominate */
-.grid-veil {
-position: fixed;
-inset: 0;
-background: radial-gradient(ellipse at 30% 20%, rgba(14,16,19,0.2) 0%, rgba(14,16,19,0.88) 65%);
-pointer-events: none;
-z-index: 0;
-}
+  /* subtle vignette so the grid doesn't dominate */
+  .grid-veil {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(14,16,19,0.2) 0%, rgba(14,16,19,0.88) 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.content { position: relative; z-index: 1; }
+  .content { position: relative; z-index: 1; }
 
-header.top {
-display: flex;
-justify-content: space-between;
-align-items: baseline;
-border-bottom: 1px solid var(--line);
-padding-bottom: 18px;
-margin-bottom: 56px;
-}
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 18px;
+    margin-bottom: 56px;
+  }
 
-.mark {
-font-family: var(--serif);
-font-size: 15px;
-letter-spacing: 0.02em;
-color: var(--text-muted);
-}
+  .mark {
+    font-family: var(--serif);
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+  }
 
-.mark span { color: var(--accent); }
+  .mark span { color: var(--accent); }
 
-.location {
-font-size: 13px;
-color: var(--text-muted);
-}
+  .location {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
 
-.hero {
-display: grid;
-grid-template-columns: 1.4fr 0.9fr;
-gap: 56px;
-align-items: start;
-margin-bottom: 72px;
-}
+  .hero {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 56px;
+    align-items: start;
+    margin-bottom: 72px;
+  }
 
-@media (max-width: 760px) {
-.hero { grid-template-columns: 1fr; }
-}
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; }
+  }
 
-h1 {
-font-family: var(--serif);
-font-weight: 500;
-font-size: clamp(40px, 6vw, 64px);
-line-height: 1.05;
-margin: 0 0 22px 0;
-letter-spacing: -0.01em;
-}
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
+    margin: 0 0 22px 0;
+    letter-spacing: -0.01em;
+  }
 
-.role {
-font-size: 15px;
-color: var(--accent);
-font-family: var(--sans);
-margin-bottom: 28px;
-display: flex;
-align-items: center;
-gap: 10px;
-}
+  .role {
+    font-size: 15px;
+    color: var(--accent);
+    font-family: var(--sans);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-.role::before {
-content: "";
-width: 7px;
-height: 7px;
-border-radius: 50%;
-background: var(--accent);
-display: inline-block;
-}
+  .role::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
 
-.intro {
-font-size: 17px;
-line-height: 1.65;
-color: var(--text);
-max-width: 62ch;
-}
+  .intro {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text);
+    max-width: 62ch;
+  }
 
-.intro strong {
-color: var(--text);
-font-weight: 600;
-}
+  .intro strong {
+    color: var(--text);
+    font-weight: 600;
+  }
 
-.stack-note {
-margin-top: 22px;
-font-size: 13.5px;
-color: var(--text-muted);
-line-height: 1.6;
-border-left: 2px solid var(--accent-dim);
-padding-left: 14px;
-}
+  .stack-note {
+    margin-top: 22px;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    border-left: 2px solid var(--accent-dim);
+    padding-left: 14px;
+  }
 
-/* photo panel */
-.photo-panel {
-aspect-ratio: 4 / 5;
-border: 1px solid var(--line);
-background: var(--bg-raised);
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-}
+  /* photo panel */
+  .photo-panel {
+    aspect-ratio: 4 / 5;
+    border: 1px solid var(--line);
+    background: var(--bg-raised);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
-.photo-panel img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-}
+  .photo-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-.photo-placeholder {
-text-align: center;
-color: var(--text-muted);
-font-size: 13px;
-padding: 24px;
-line-height: 1.6;
-}
+  .photo-placeholder {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    padding: 24px;
+    line-height: 1.6;
+  }
 
-.photo-placeholder .corner {
-position: absolute;
-width: 16px;
-height: 16px;
-border: 1px solid var(--accent-dim);
-}
-.corner.tl { top: 12px; left: 12px; border-right: none; border-bottom: none; }
-.corner.tr { top: 12px; right: 12px; border-left: none; border-bottom: none; }
-.corner.bl { bottom: 12px; left: 12px; border-right: none; border-top: none; }
-.corner.br { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+  .photo-placeholder .corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--accent-dim);
+  }
+  .corner.tl { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+  .corner.tr { top: 12px; right: 12px; border-left: none; border-bottom: none; }
+  .corner.bl { bottom: 12px; left: 12px; border-right: none; border-top: none; }
+  .corner.br { bottom: 12px; right: 12px; border-left: none; border-top: none; }
 
-/* links section */
-.links {
-border-top: 1px solid var(--line);
-padding-top: 40px;
-}
+  /* links section */
+  .links {
+    border-top: 1px solid var(--line);
+    padding-top: 40px;
+  }
 
-.links-heading {
-font-family: var(--serif);
-font-size: 22px;
-margin: 0 0 24px 0;
-color: var(--text);
-}
+  .links-heading {
+    font-family: var(--serif);
+    font-size: 22px;
+    margin: 0 0 24px 0;
+    color: var(--text);
+  }
 
-.link-list {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 1px;
-background: var(--line);
-border: 1px solid var(--line);
-}
+  .link-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
 
-@media (max-width: 700px) {
-.link-list { grid-template-columns: repeat(2, 1fr); }
-}
+  @media (max-width: 700px) {
+    .link-list { grid-template-columns: repeat(2, 1fr); }
+  }
 
-.link-item {
-background: var(--bg-raised);
-padding: 26px 22px;
-text-decoration: none;
-color: var(--text);
-display: flex;
-flex-direction: column;
-gap: 10px;
-transition: background 0.18s ease;
-}
+  .link-item {
+    background: var(--bg-raised);
+    padding: 26px 22px;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: background 0.18s ease;
+  }
 
-.link-item {
-background: #1D2027;
-}
+  .link-item:hover {
+    background: #1D2027;
+  }
 
-.link-item .link-name {
-color: var(--accent);
-}
+  .link-item:hover .link-name {
+    color: var(--accent);
+  }
 
-.link-icon {
-width: 20px;
-height: 20px;
-color: var(--text-muted);
-}
+  .link-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-muted);
+  }
 
-.link-item .link-icon { color: var(--accent); }
+  .link-item:hover .link-icon { color: var(--accent); }
 
-.link-name {
-font-size: 15px;
-font-weight: 600;
-transition: color 0.18s ease;
-}
+  .link-name {
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.18s ease;
+  }
 
-.link-sub {
-font-size: 12.5px;
-color: var(--text-muted);
-}
+  .link-sub {
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
 
-footer {
-margin-top: 64px;
-padding-top: 24px;
-border-top: 1px solid var(--line);
-font-size: 12.5px;
-color: var(--text-muted);
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 8px;
-}
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
-a { color: inherit; }
+  a { color: inherit; }
 
-@media (prefers-reduced-motion: reduce) {
-* { transition: none !important; }
-}
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
 </style>
-
 </head>
 <body>
 <div class="grid-veil"></div>
 <div class="wrap">
   <div class="content">
 
-<header class="top">
-  <div class="mark">Negin<span>.</span>ai</div>
-  <div class="location">Kaiserslautern, Germany</div>
-</header>
+    <header class="top">
+      <div class="mark">Negin<span>.</span>ai</div>
+      <div class="location">Kaiserslautern, Germany</div>
+    </header>
 
-<section class="hero">
-  <div>
-    <div class="role">AI Engineer</div>
-    <h1>Negin</h1>
-    <p class="intro">
-      I build and ship applied AI systems — from fine-tuning open LLMs like
-      <strong>Llama</strong> and <strong>Mistral</strong> with LoRA/PEFT, to agentic
-      pipelines with <strong>LangChain</strong> and multimodal vision-language models.
-      My background in embedded systems means I care as much about how a model
-      runs in production as how it performs on a benchmark — I deploy on AWS
-      with <strong>SageMaker</strong>, <strong>EC2</strong>, and <strong>FastAPI</strong>,
-      and wrap it all in interfaces people actually use.
-    </p>
-    <div class="stack-note">
-      M.Sc. Embedded Systems, RPTU Kaiserslautern · B.Sc. Electrical Engineering,
-      Amirkabir University of Technology
-    </div>
-  </div>
+    <section class="hero">
+      <div>
+        <div class="role">AI Engineer</div>
+        <h1>Negin</h1>
+        <p class="intro">
+          I build and ship applied AI systems — from fine-tuning open LLMs like
+          <strong>Llama</strong> and <strong>Mistral</strong> with LoRA/PEFT, to agentic
+          pipelines with <strong>LangChain</strong> and multimodal vision-language models.
+          My background in embedded systems means I care as much about how a model
+          runs in production as how it performs on a benchmark — I deploy on AWS
+          with <strong>SageMaker</strong>, <strong>EC2</strong>, and <strong>FastAPI</strong>,
+          and wrap it all in interfaces people actually use.
+        </p>
+        <div class="stack-note">
+          M.Sc. Embedded Systems, RPTU Kaiserslautern · B.Sc. Electrical Engineering,
+          Amirkabir University of Technology
+        </div>
+      </div>
 
-  <div class="photo-panel">
-    <!-- Replace this placeholder with: <img src="your-photo.jpg" alt="Negin"> -->
-    <div class="corner tl"></div>
-    <div class="corner tr"></div>
-    <div class="corner bl"></div>
-    <div class="corner br"></div>
-    <div class="photo-placeholder">
-      Drop your photo here<br>
-      <span style="opacity:0.6;">(replace the .photo-panel div's contents with an &lt;img&gt; tag)</span>
-    </div>
-  </div>
-</section>
+      <div class="photo-panel">
+        <img src="photo.jpg" alt="Portrait of Negin Soleymani">
+      </div>
+    </section>
 
-<section class="links">
-  <h2 class="links-heading">Find me</h2>
-  <div class="link-list">
+    <section class="links">
+      <h2 class="links-heading">Find me</h2>
+      <div class="link-list">
 
-    <a class="link-item" href="https://github.com/negso98" target="_blank" rel="noopener">
-      <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.02 11.02 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
-      <span class="link-name">GitHub</span>
-      <span class="link-sub">@negso98</span>
-    </a>
+        <a class="link-item" href="https://github.com/negso98" target="_blank" rel="noopener">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.02 11.02 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          <span class="link-name">GitHub</span>
+          <span class="link-sub">@negso98</span>
+        </a>
 
-    <a class="link-item" href="https://www.linkedin.com/in/negsoleymani/" target="_blank" rel="noopener">
-      <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      <span class="link-name">LinkedIn</span>
-      <span class="link-sub">Connect with me</span>
-    </a>
+        <a class="link-item" href="https://www.linkedin.com/in/negsoleymani/" target="_blank" rel="noopener">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          <span class="link-name">LinkedIn</span>
+          <span class="link-sub">Connect with me</span>
+        </a>
 
-    <a class="link-item" href="https://open.spotify.com/user/zc59tguukve4xbayb6d8z99pg?si=pNT051EcT3qh0kODKtWPmQ&utm_source=copy-link" target="_blank" rel="noopener">
-      <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12S5.65 23.5 12 23.5 23.5 18.35 23.5 12 18.35.5 12 .5zm5.02 16.06a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 0 1-.33-1.46c4.58-1.04 8.5-.6 11.66 1.34.36.22.47.68.25 1.03zm1.34-3.01a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.56-11.97-1.4a.94.94 0 0 1-.55-1.8c4.37-1.32 9.8-.68 13.5 1.6.44.27.58.85.31 1.29zm.12-3.14C14.87 8.22 9.2 8.02 5.9 9.03a1.13 1.13 0 1 1-.66-2.16c3.79-1.15 10.1-.92 14.09 1.44a1.13 1.13 0 0 1-1.15 1.94.02.02 0 0 1-.02-.03z"/></svg>
-      <span class="link-name">Spotify</span>
-      <span class="link-sub">What I'm listening to</span>
-    </a>
+        <a class="link-item" href="https://open.spotify.com/user/zc59tguukve4xbayb6d8z99pg?si=pNT051EcT3qh0kODKtWPmQ&utm_source=copy-link" target="_blank" rel="noopener">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12S5.65 23.5 12 23.5 23.5 18.35 23.5 12 18.35.5 12 .5zm5.02 16.06a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 0 1-.33-1.46c4.58-1.04 8.5-.6 11.66 1.34.36.22.47.68.25 1.03zm1.34-3.01a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.56-11.97-1.4a.94.94 0 0 1-.55-1.8c4.37-1.32 9.8-.68 13.5 1.6.44.27.58.85.31 1.29zm.12-3.14C14.87 8.22 9.2 8.02 5.9 9.03a1.13 1.13 0 1 1-.66-2.16c3.79-1.15 10.1-.92 14.09 1.44a1.13 1.13 0 0 1-1.15 1.94.02.02 0 0 1-.02-.03z"/></svg>
+          <span class="link-name">Spotify</span>
+          <span class="link-sub">What I'm listening to</span>
+        </a>
 
-    <a class="link-item" href="resume.pdf" download>
-      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-      <span class="link-name">Resume</span>
-      <span class="link-sub">Download PDF</span>
-    </a>
+        <a class="link-item" href="resume.pdf" download>
+          <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          <span class="link-name">Resume</span>
+          <span class="link-sub">Download PDF</span>
+        </a>
 
-  </div>
-</section>
+      </div>
+    </section>
 
-<footer>
-  <span>Kaiserslautern, DE</span>
-  <span>Built with care, one grid cell at a time.</span>
-</footer>
+    <footer>
+      <span>Kaiserslautern, DE</span>
+      <span>Built with care, one grid cell at a time.</span>
+    </footer>
 
   </div>
 </div>
