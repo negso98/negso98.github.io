@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Negin — AI Engineer</title>
 <style>
-  :root{
-    --bg: #0E1013;
-    --bg-raised: #171A1F;
-    --line: #2A2E35;
-    --text: #E9E6DD;
-    --text-muted: #9A9FA8;
-    --accent: #E8A33D;
-    --accent-dim: #7A5A28;
-    --serif: "Source Serif Pro", "Iowan Old Style", Georgia, serif;
-    --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
-  }
+  :root {
+  --bg: #F5F3EE;
+  --bg-raised: #FFFFFF;
+  --line: #D8D5CE;
+  --text: #17191D;
+  --text-muted: #666C76;
+  --accent: #C97818;
+  --accent-dim: #D6A15C;
+  --serif: "Source Serif Pro", "Iowan Old Style", Georgia, serif;
+  --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
 
   * { box-sizing: border-box; }
 
@@ -51,11 +51,7 @@
 
   /* subtle vignette so the grid doesn't dominate */
   .grid-veil {
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 20%, rgba(14,16,19,0.2) 0%, rgba(14,16,19,0.88) 65%);
-    pointer-events: none;
-    z-index: 0;
+    display: none;
   }
 
   .content { position: relative; z-index: 1; }
@@ -219,7 +215,7 @@
   }
 
   .link-item:hover {
-    background: #1D2027;
+    background: #F0EDE6;
   }
 
   .link-item:hover .link-name {
